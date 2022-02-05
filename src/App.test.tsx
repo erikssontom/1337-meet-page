@@ -4,6 +4,6 @@ import App from "./App";
 
 test("renders App component", () => {
   render(<App />);
-  const meetPageText = screen.getByText("Meet Page");
-  expect(meetPageText).toBeInTheDocument();
+  const appText = screen.getByText("App");
+  expect(appText).toBeInTheDocument();
 });
