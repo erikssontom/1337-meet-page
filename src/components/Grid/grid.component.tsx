@@ -1,13 +1,7 @@
 import React from "react";
-import EmployeeCard from "../EmployeeCard";
 
 const Grid = () => {
-  return (
-    <div>
-      Grid
-      <EmployeeCard />
-    </div>
-  );
+  return <div>Grid</div>;
 };
 
 export default Grid;
