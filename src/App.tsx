@@ -1,7 +1,13 @@
 import React from "react";
+import Meet from "./pages/Meet";
 
 const App = () => {
-  return <div className="App">App</div>;
+  return (
+    <div>
+      App
+      <Meet />
+    </div>
+  );
 };
 
 export default App;
