@@ -12,7 +12,7 @@ const App = () => {
       return json;
     };
     if (!apiKey || !endpoint) return;
-    fetchData(apiKey, endpoint).then(console.log);
+    // fetchData(apiKey, endpoint).then(console.log);
   }, []);
   return (
     <div>
