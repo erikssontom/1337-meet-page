@@ -12,10 +12,10 @@ const ToolBar: FC<ToolBarProps> = ({ setSortParam, setFilterParam }) => {
     <div className={styles.toolBarColumn}>
       Sort on:
       <div className={styles.toolBarRow}>
-        <button onClick={() => {
+        <button className={styles.button} onClick={() => {
           setSortParam(({ method }) => { return { method: method * -1, var: 'office' } })
         }} >Office</button>
-        <button onClick={() => {
+        <button className={styles.button} onClick={() => {
           setSortParam(({ method }) => { return { method: method * -1, var: 'name' } })
         }} >Name</button>
       </div>
@@ -25,11 +25,11 @@ const ToolBar: FC<ToolBarProps> = ({ setSortParam, setFilterParam }) => {
       <div className={styles.toolBarRow}>
         <label>
           Office:
-          <input type="text" onChange={e => setFilterParam(({ name }) => { return { name, office: e.target.value } })} />
+          <input className={styles.inputField} type="text" onChange={e => setFilterParam(({ name }) => { return { name, office: e.target.value } })} />
         </label>
         <label>
           Name:
-          <input type="text" onChange={e => setFilterParam(({ office }) => { return { office, name: e.target.value } })} />
+          <input className={styles.inputField} type="text" onChange={e => setFilterParam(({ office }) => { return { office, name: e.target.value } })} />
         </label>
       </div>
     </div>
