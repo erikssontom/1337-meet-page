@@ -5,6 +5,7 @@
   box-shadow: var(--card-shadow);
   padding: 1rem;
   border-radius: var(--card-border-radius);
+  background-color: var(--card-background-color);
 }
 
 .img {
