@@ -4,6 +4,8 @@ import Grid from "../../components/Grid";
 import ToolBar from "../../components/ToolBar";
 
 const Meet = () => {
+  const [employees, setEmployees] = useState<Employee[]>();
+
   useEffect(() => {
     const apiKey = process.env.REACT_APP_API_KEY;
     const endpoint = process.env.REACT_APP_API_ENDPOINT;
@@ -15,12 +17,12 @@ const Meet = () => {
       return json;
     };
     if (!apiKey || !endpoint) return;
-    // fetchData(apiKey, endpoint).then(console.log);
+    fetchData(apiKey, endpoint).then(setEmployees);
   }, []);
   return (
     <div>
       <ToolBar />
-      <Grid />
+      {employees && <Grid employees={employees} />}
     </div>
   );
 };
