@@ -7,4 +7,14 @@ declare module "types" {
     linkedIn?: string;
     imagePortraitUrl: string;
   };
+
+  export type FilterParam = {
+    name: string;
+    office: string;
+  };
+
+  export type SortParam = {
+    method: number;
+    var: "name" | "office";
+  };
 }
