@@ -1,0 +1,11 @@
+.container {
+  width: 50%;
+
+  padding: 3rem;
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+}
+.messageText {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
