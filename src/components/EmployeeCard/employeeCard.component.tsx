@@ -14,7 +14,7 @@ const EmployeeCard: FC<EmployeeCardProps> = ({
   imagePortraitUrl,
 }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="employee-card">
       <img className={styles.img} src={imagePortraitUrl} alt={name} />
       <div className={styles.cardInfoGrid}>
         <div className={styles.cardInfoGridRow}>
