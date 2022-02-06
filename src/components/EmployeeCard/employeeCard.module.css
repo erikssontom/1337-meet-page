@@ -1,10 +1,10 @@
-@import '../../lib/variables.css';
+@import "../../lib/variables.css";
 
 .container {
   width: 14rem;
   box-shadow: var(--card-shadow);
   padding: 1rem;
-  border-radius: var(--card-border-radius)
+  border-radius: var(--card-border-radius);
 }
 
 .img {
