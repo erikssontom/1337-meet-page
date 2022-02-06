@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# The meet-page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Enclose a README with a short description of your product, the thoughts behind the design of your code, a list of the stories you selected and why you chose the features that you did.
+It should also contain instructions on how to install, build and run the application.
 
-## Available Scripts
+This is a simple web app displaying the collegues at tretton37. The app is build with create-react-app using typescript and css-modules. To use this app, clone the repo and add a .env with the following variables:
 
-In the project directory, you can run:
+REACT_APP_API_ENDPOINT
+and
+REACT_APP_API_KEY
 
-### `npm start`
+then start the app locally by:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+npm ci
+npm start
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+or simply deploy the app to a hosting provider like Netlify. Don't forget to supply the env. variables.
 
-### `npm test`
+## Features from assignment matrix
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Responsive design
+The app is responsive and works on both mobile, tablet and desktop.
 
-### `npm run build`
+### Modern CSS
+The app uses css-modules to prevent potential leakage of css and make folder structure better. Uses variables and clamp.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Sort by name and office
+The app allows the user to press either name och office button to sort on that field.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Filter by name and office
+The app allows the user to enter text to filter on name and office.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Available on free public url
+The app is deployed to netlify.
 
-### `npm run eject`
+### Typescript
+The app is written in typescript to minimize errors.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Unit tests
+Some small tests are written, although it is not my strongest side. This is an area where id like to improve, alot.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Reason for features
+Most of the features are chosen because i have experience with it and know somewhat how to do it. Areas that i didn't focus on was on accesabilty (colorblindness and screen reader) since i havn't used these features in older projects and though it might be better to do show my more experieced qualities in this assignment.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Link to the app: https://jolly-darwin-f84fb7.netlify.app/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Enjoy! :)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
