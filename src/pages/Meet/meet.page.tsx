@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Employee } from "types";
+import React, { useEffect, useMemo, useState } from "react";
+import { Employee, FilterParam, SortParam } from "types";
 import ErrorCard from "../../components/ErrorCard";
 import Grid from "../../components/Grid";
 import ToolBar from "../../components/ToolBar";
@@ -7,6 +7,17 @@ import ToolBar from "../../components/ToolBar";
 const Meet = () => {
   const [employees, setEmployees] = useState<Employee[]>();
   const [hasErrorMessage, setHasErrorMessage] = useState(false);
+  const [filterParam, setFilterParam] = useState<FilterParam>({ name: '', office: '' });
+  const [sortParam, setSortParam] = useState<SortParam>({ method: -1, var: 'name' });
+
+  const sortedAndFilteredEmployees = useMemo(() => {
+    return employees?.filter(employee => {
+      return employee.name.toLowerCase().startsWith(filterParam.name.toLowerCase()) && employee.office.toLowerCase().startsWith(filterParam.office.toLowerCase());
+    }).sort((eA, eB) => {
+      return eA[sortParam.var] < eB[sortParam.var] ? sortParam.method : sortParam.method * -1;
+    })
+  }, [filterParam, sortParam, employees])
+
   useEffect(() => {
     const apiKey = process.env.REACT_APP_API_KEY;
     const endpoint = process.env.REACT_APP_API_ENDPOINT;
@@ -32,10 +43,10 @@ const Meet = () => {
   }, []);
   return (
     <div>
-      <ToolBar />
+      <ToolBar setFilterParam={setFilterParam} setSortParam={setSortParam} />
       <>
-        {employees && !hasErrorMessage ? <Grid employees={employees} /> :
-          <ErrorCard message="Oups! Seems like our team is not available right now! Please revisit us again soon!" />}
+        {sortedAndFilteredEmployees && <Grid employees={sortedAndFilteredEmployees} />}
+        {hasErrorMessage && !employees && <ErrorCard message="Oups! Seems like our team is not available right now! Please revisit us again soon!" />}
       </>
     </div>
   );
