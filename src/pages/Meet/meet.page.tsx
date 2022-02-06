@@ -37,7 +37,7 @@ const Meet = () => {
 
   const sortedAndFilteredEmployees = useMemo(() => {
     return employees?.filter(employee => {
-      return employee.name.toLowerCase().startsWith(filterParam.name.toLowerCase()) && employee.office.toLowerCase().startsWith(filterParam.office.toLowerCase());
+      return employee.name.toLowerCase().includes(filterParam.name.toLowerCase()) && employee.office.toLowerCase().startsWith(filterParam.office.toLowerCase());
     }).sort((eA, eB) => {
       return eA[sortParam.var] < eB[sortParam.var] ? sortParam.method : sortParam.method * -1;
     })
