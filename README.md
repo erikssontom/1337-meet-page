@@ -1,8 +1,5 @@
 # The meet-page
 
-Enclose a README with a short description of your product, the thoughts behind the design of your code, a list of the stories you selected and why you chose the features that you did.
-It should also contain instructions on how to install, build and run the application.
-
 This is a simple web app displaying the collegues at tretton37. The app is build with create-react-app using typescript and css-modules. To use this app, clone the repo and add a .env with the following variables:
 
 REACT_APP_API_ENDPOINT
